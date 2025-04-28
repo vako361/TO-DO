@@ -37,7 +37,7 @@ function App() {
     flex flex-col items-center justify-center box-border font-sans
   `}
    style={{ backgroundImage: `url(${isDark ? DarkBg : LightBg})` }}>
-    <div className='w-[540px] h-[439px]'>
+    <div className="w-[327px] sm:w-[540px] h-[439px]">
 
       <div id='wrap-head' className='w-full flex flex-row justify-between items-center relative '>
       <h1 className='text-[#FFF] text-[40px] mb-[72px] block'>TODO</h1>
@@ -53,11 +53,11 @@ function App() {
           handleAdd();
         }
       }
+   
     }
       onChange={(event) =>
          setInputValue(event.target.value)}
          />
-      {/* <button className='bg-red-100' onClick={inputValue.trim().length > 0 ? handleAdd: null} >Add</button> */}
    
     <div className='flex flex-col gap-0.5'>
       <ul className='flex flex-col gap-0.5'>
@@ -78,7 +78,7 @@ function App() {
      <div className='flex flex-row items-center gap-4 justify-self-center '> 
      <button className="cursor-pointer text-[#3A7CFD]" onClick={() => setTasks([])}>All</button>
      <button className="cursor-pointer text-[#5B5E7E]" onClick={() => activeAll()}>Active</button>
-     <button className="cursor-pointer text-[#5B5E7E]">Completed</button>
+     <button className="cursor-pointer text-[#5B5E7E]" onClick={inputValue.trim().length > 0 ? handleAdd : null}>Add</button>
      </div>
 
      <button className="cursor-pointer text-[#5B5E7E]" onClick={() => handleDelete()}>Clear Completed</button>
