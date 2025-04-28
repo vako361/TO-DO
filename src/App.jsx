@@ -37,7 +37,7 @@ function App() {
     flex flex-col items-center justify-center box-border font-sans
   `}
    style={{ backgroundImage: `url(${isDark ? DarkBg : LightBg})` }}>
-    <div className="w-[327px] sm:w-[540px] h-[439px]">
+    <div className="w-[327px] sm:w-[540px] h-[80%]  rounded-[10px] ">
 
       <div id='wrap-head' className='w-full flex flex-row justify-between items-center relative '>
       <h1 className='text-[#FFF] text-[40px] mb-[72px] block'>TODO</h1>
